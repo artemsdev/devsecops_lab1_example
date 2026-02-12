@@ -18,7 +18,7 @@ def health_check():
     print(f"Connecting to DB with secret: {db_password[:2]}***")
 
     # DB response
-    time.sleep(1)
+    time.sleep(10)
     return jsonify({"status": "UP", "database": "connected"}), 200
 
 if __name__ == '__main__':

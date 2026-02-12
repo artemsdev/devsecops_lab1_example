@@ -30,13 +30,3 @@ jobs:
         DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
       run: |
         pytest -v
-
-  deploy:
-      needs: test  
-      runs-on: ubuntu-latest
-      if: github.ref == 'refs/heads/main' 
-      
-      steps:
-        - name: Deploy to Render
-          run: |
-            curl -X GET ${{ secrets.RENDER_DEPLOY_HOOK }}

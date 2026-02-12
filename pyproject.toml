@@ -1,0 +1,14 @@
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lab_1"
+version = "0.1.0"
+description = "First lab"
+dependencies = [
+    "flask",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]

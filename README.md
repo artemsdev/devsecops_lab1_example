@@ -1,0 +1,1 @@
+Create a CI/CD pipeline on a server for a sample web application that automates build, test, and deployment stages.

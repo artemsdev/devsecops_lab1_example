@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<p>Hello</p>'
+    return render_template('index.html')
 
 @app.route('/health')
 def health_check():

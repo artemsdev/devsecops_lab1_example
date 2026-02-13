@@ -10,7 +10,7 @@ def index():
 @app.route('/health')
 def health_check():
     # DB PASS chk
-    db_password = os.getenv('DB_PASWORD')
+    db_password = os.getenv('DB_PASSWORD')
     
     if not db_password:
         return jsonify({"status": "ERROR", "message": "Secret DB_PASSWORD is missing!"}), 500

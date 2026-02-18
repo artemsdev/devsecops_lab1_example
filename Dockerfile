@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN pip install -e .
+RUN pip install .
 
 EXPOSE 5000
 

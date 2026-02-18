@@ -7,6 +7,7 @@ class TestHealthAPI(unittest.TestCase):
         self.app.testing = True
 
     def test_health_status(self):
+        
         start_time = time.time()
         response = self.app.get('/health')
         end_time = time.time()

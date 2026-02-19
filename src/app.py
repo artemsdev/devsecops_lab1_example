@@ -3,6 +3,17 @@ from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
 
+APP_VERSION = os.getenv('APP_VERSION', 'v1.0.0-dev')
+COMMIT_SHA = os.getenv('COMMIT_SHA', 'local-build')
+
+@app.context_processor
+def inject_version():
+    
+    return {
+        'app_version': APP_VERSION,
+        'commit_sha': COMMIT_SHA[:7]
+    }
+
 @app.route('/')
 def index():
     return render_template('index.html')

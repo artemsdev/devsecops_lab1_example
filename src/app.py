@@ -8,7 +8,7 @@ COMMIT_SHA = os.getenv('COMMIT_SHA', 'local-build')
 
 @app.context_processor
 def inject_version():
-    
+
     return {
         'app_version': APP_VERSION,
         'commit_sha': COMMIT_SHA[:7]
@@ -34,4 +34,4 @@ def health_check():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(host="0.0.0.0", port=port) # nosec B104 

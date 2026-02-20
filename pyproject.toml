@@ -25,4 +25,5 @@ include = ["src*"]
 [tool.bandit]
 targets = ["src"]
 recursive = true
+level = "medium"
 exclude_dirs = ["tests"]

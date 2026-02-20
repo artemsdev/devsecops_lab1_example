@@ -19,12 +19,12 @@ jobs:
         python-version: "3.11"
 
     - name: Install Bandit
-      run: |
-        ls 
-        pip install bandit
+      run: pip install bandit
 
     - name: Run Bandit Security Scan
-      run: bandit -c pyproject.toml . 
+      run: |
+        ls
+        bandit -c pyproject.toml . 
 
   test:
     runs-on: ubuntu-latest

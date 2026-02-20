@@ -34,5 +34,5 @@ def health_check():
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
-    API_KEY = 'my key'
+    API_KEY = '1231d2tete12dgfdtrerdgfgc123gf145c6fg67gf7fg88s90x-x'
     app.run(host="0.0.0.0", port=port) 

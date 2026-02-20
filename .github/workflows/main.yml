@@ -21,6 +21,11 @@ jobs:
     - name: Install Bandit
       run: pip install bandit
 
+    - name: Check for vulnerable dependencies
+      run: |
+        pip install safety
+        safety check
+
     - name: Run Bandit Security Scan
       run: bandit -r . -c pyproject.toml -ll
 

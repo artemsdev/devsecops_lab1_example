@@ -4,7 +4,7 @@ from flask import Flask, jsonify, render_template
 app = Flask(__name__)
 
 APP_VERSION = os.getenv('APP_VERSION', 'v1.0.0-dev')
-COMMIT_SHA = os.getenv('COMMIT_SHA', 'local-build')
+COMMIT_SHA = os.getenv('RAILWAY_GIT_COMMIT_SHA') or os.getenv('COMMIT_SHA') or 'local'
 
 @app.context_processor
 def inject_version():

@@ -23,6 +23,6 @@ where = ["."]
 include = ["src*"]
 
 [tool.bandit]
-targets = ["src"]
-recursive = true
+targets = ["./src"]
+level = "medium"
 exclude_dirs = ["tests"]

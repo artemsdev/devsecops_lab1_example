@@ -22,7 +22,7 @@ jobs:
       run: pip install bandit
 
     - name: Run Bandit Security Scan
-      run: bandit -c pyproject.toml . -ll
+      run: bandit -r . -c pyproject.toml -ll
 
   test:
     runs-on: ubuntu-latest

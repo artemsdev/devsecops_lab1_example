@@ -2,7 +2,7 @@ import time, os
 from flask import Flask, jsonify, render_template
 
 app = Flask(__name__)
-AWS_SECRET_KEY = "AKIAIMNO887362JDH7D"
+
 APP_VERSION = os.getenv('APP_VERSION', 'v1.0.0-dev')
 COMMIT_SHA = os.getenv('RAILWAY_GIT_COMMIT_SHA') or os.getenv('COMMIT_SHA') or 'local'
 
@@ -34,6 +34,5 @@ def health_check():
 
 if __name__ == '__main__':
 
-    exec(cmd) 
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port) 

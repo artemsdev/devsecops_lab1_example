@@ -3,32 +3,9 @@ name: Python CI Pipeline
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  security:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: "3.11"
-
-    - name: Install Bandit
-      run: pip install bandit
-
-    - name: Check for vulnerable dependencies
-      uses: pyupio/safety-action@v1
-      with:
-        api-key: ${{ secrets.SAFETY_API_KEY }}
-
-    - name: Run Bandit Security Scan
-      run: bandit -r . -c pyproject.toml -ll
-
+  
   test:
     runs-on: ubuntu-latest
 

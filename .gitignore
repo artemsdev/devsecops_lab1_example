@@ -13,3 +13,4 @@ venv/
 
 # Testing
 .pytest_cache/
+.safety-project.ini
